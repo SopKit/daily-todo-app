@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily To-Do App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Daily To-Do List</h1>
+            <button style="background:transparent;" id="reset-btn"><svg width="25px" height="25px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+
+<g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0 1 1 0 2.5 2.5)">
+
+<path d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"/>
+
+<path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"/>
+
+</g>
+
+</svg></button>
+        </div>
+        <div class="topbox">
+          <input type="text" id="todo-input" placeholder="Add a new to-do">
+          <div id="add-btn">+</div></div>
+        <div class="progress-bar" id="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>To-Do</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="todo-list"></tbody>
+        </table>
+        <details>
+            <summary>Work Done Today</summary>
+            <ul id="completed-list"></ul>
+        </details>
+    </button>
+    <script src="app.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          }, err => {
+            console.log('Service Worker registration failed:', err);
+          });
+      });
+    }
+  </script>
+
+</body>
+</html>

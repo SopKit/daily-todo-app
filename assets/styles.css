@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.topbox {
+  display : flex;
+  align-items:center;
+  gap: 10px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline : 0px;
+    padding-left : 20px;
+}
+
+#add-btn {
+  width : 20%;
+  font-size:40px;
+  text-align:center;
+  
+}
+
+button {
+    padding: 10px;
+/*     background-color: #007bff; */
+/*     color: #fff; */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 10px 0;
+    align-self: flex-start;
+}
+
+button:hover {
+/*     background-color: #0056b3; */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    width: 0%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-y: auto;
+    max-height: 50vh;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+.todo-item.checked {
+    text-decoration: line-through;
+    color: #888;
+}
+
+details {
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 20vh;
+    overflow-y: auto;
+}
+
+details li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 5px 0;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drag-handle {
+    cursor: grab;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+td:nth-child(2) {
+  display: flex;
+  gap: 8px;
+  align-items : center;
+}
+td:first-child {
+  width:100%;
+}
